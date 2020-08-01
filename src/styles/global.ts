@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import githubBakcground from '../assets/Github.svg';
+import githubBakcground from '../assets/animation_640_kdbduod4.gif';
 
 export default createGlobalStyle`
   * {

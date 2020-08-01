@@ -39,3 +39,7 @@ export const Form = styled.form`
     }
   }
 `;
+
+export const Repositories = styled.div`
+  max-width: 700px;
+`;
