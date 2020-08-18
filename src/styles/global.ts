@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import githubBakcground from '../assets/animation_640_kdbduod4.gif';
+import githubBakcground from '../assets/Github.svg';
 
 export default createGlobalStyle`
   * {
@@ -15,7 +15,7 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  body, input, button {
+  body, input, button, p, h1, h2, h3 {
     font: 16px Roboto, sans-serif;
   }
   button {

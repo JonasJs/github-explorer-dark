@@ -42,4 +42,13 @@ export const Form = styled.form`
 
 export const Repositories = styled.div`
   max-width: 700px;
+  a:last-child {
+    background: red;
+  }
+`;
+
+export const ContainerButtonNavigation = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
 `;
