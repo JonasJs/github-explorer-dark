@@ -1,16 +1,19 @@
 import React, { useState, FormEvent } from 'react';
-import api from '../../services/api';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 
-import logo from '../../assets/Logo.svg';
+// Services
+import api from '../../services/api';
 
 // Components
 import Repository from '../../components/Repository';
 import ButtonNavigation from '../../components/ButtonNavigation';
 import Loading from '../../components/Loading';
+import Header from '../../components/Header';
 
+// Styles
 import { Title, Form, Repositories, ContainerButtonNavigation } from './styles';
 
+// Types
 interface Repository {
   full_name: string;
   owner: {
@@ -23,7 +26,7 @@ interface Repository {
 const Home: React.FC = () => {
   const [inputValue, setInputValue] = useState('');
   const [inputValueTemp, setInputValueTemp] = useState('');
-  const [page, setPage] = useState(1c);
+  const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [repositories, setRepositories] = useState<Repository[]>([]);
 
@@ -67,7 +70,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Loading show={loading}></Loading>
-      <img src={logo} alt="github_explorer" />
+      <Header />
       <Title>Explore repositórios no Github.</Title>
       <Form onSubmit={searchRepository}>
         <input

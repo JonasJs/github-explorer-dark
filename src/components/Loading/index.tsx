@@ -5,6 +5,7 @@ import { Container } from './styles';
 // Images
 import octocatSpinner from '../../assets/octocat-spinner.svg';
 
+// Types
 interface Props {
   show: boolean;
 }

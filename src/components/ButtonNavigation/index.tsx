@@ -1,8 +1,10 @@
 import React from 'react';
 import { IconBaseProps } from 'react-icons';
 
+// Styles
 import { Container } from './styles';
 
+// Types
 interface Props {
   onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
   iconLeft?: React.ComponentType<IconBaseProps>;
