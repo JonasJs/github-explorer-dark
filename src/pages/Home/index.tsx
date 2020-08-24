@@ -1,11 +1,13 @@
 import React, { useState, FormEvent } from 'react';
+import { Link } from 'react-router-dom';
+
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 
 // Services
 import api from '../../services/api';
 
 // Components
-import Repository from '../../components/Repository';
+import Card from '../../components/Card';
 import ButtonNavigation from '../../components/ButtonNavigation';
 import Loading from '../../components/Loading';
 import Header from '../../components/Header';
@@ -87,13 +89,14 @@ const Home: React.FC = () => {
         {repositories.length > 0 && (
           <>
             {repositories.map(({ owner, full_name, description }, key) => (
-              <Repository
-                key={key}
-                owner={owner.login}
-                image={owner.avatar_url}
-                title={full_name}
-                description={description}
-              />
+              <Link to={`/details/${full_name}`} key={key}>
+                <Card
+                  owner={owner.login}
+                  image={owner.avatar_url}
+                  title={full_name}
+                  description={description}
+                />
+              </Link>
             ))}
             {repositories.length > 1 && (
               <ContainerButtonNavigation>

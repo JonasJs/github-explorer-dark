@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiChevronLeft } from 'react-icons/fi';
 
@@ -19,7 +19,7 @@ interface Props {
 
 const Header: React.FC<Props> = ({ goBack = false, href = '/' }) => {
   return (
-    <>
+    <Container>
       <Link to="/">
         <img src={logo} alt="github_explorer" />
       </Link>
@@ -28,7 +28,7 @@ const Header: React.FC<Props> = ({ goBack = false, href = '/' }) => {
           <ButtonNavigation iconLeft={FiChevronLeft}>Back</ButtonNavigation>
         </Link>
       )}
-    </>
+    </Container>
   );
 };
 

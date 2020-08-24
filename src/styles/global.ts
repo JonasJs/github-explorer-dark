@@ -18,6 +18,11 @@ export default createGlobalStyle`
   body, input, button, p, h1, h2, h3 {
     font: 16px Roboto, sans-serif;
   }
+
+  a {
+    text-decoration: none;
+  }
+
   button {
     cursor: pointer;
   }
@@ -33,7 +38,7 @@ export default createGlobalStyle`
     --primary: #24292E;
     --secondary: #6E6A81;
     --white: #FFF;
-    --light-gray: #A8A8B3;
+    --light-gray: #737380;
     --gray: #A8A8B3;
   }
 `;

@@ -4,15 +4,15 @@ import { Container } from './styles';
 
 // Types
 interface Props {
-  image: string;
+  image?: string;
   title: string;
-  owner: string;
+  owner?: string;
   description: string;
 }
 
-const Repository: React.FC<Props> = ({ image, owner, title, description }) => {
+const Card: React.FC<Props> = ({ image, owner, title, description }) => {
   return (
-    <Container to={`/details/${title}`}>
+    <Container>
       <img src={image} alt={owner} />
       <div>
         <strong>{title}</strong>
@@ -23,4 +23,4 @@ const Repository: React.FC<Props> = ({ image, owner, title, description }) => {
   );
 };
 
-export default Repository;
+export default Card;

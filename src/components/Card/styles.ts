@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
-export const Container = styled(Link)`
+export const Container = styled.div`
   width: 100%;
   padding: 16px;
   background: var(--white);
@@ -11,10 +10,6 @@ export const Container = styled(Link)`
   display: flex;
   align-items: center;
   transition: transform 0.2s;
-
-  & + a {
-    margin-top: 16px;
-  }
 
   &:hover {
     transform: translateX(10px);

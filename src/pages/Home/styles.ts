@@ -42,8 +42,9 @@ export const Form = styled.form`
 
 export const Repositories = styled.div`
   max-width: 700px;
-  a:last-child {
-    background: red;
+  a + a {
+    margin-top: 16px;
+    display: block;
   }
 `;
 
