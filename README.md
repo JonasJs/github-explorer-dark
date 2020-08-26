@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="" rel="noopener">
+  <a href="https://github-explorer-dark.vercel.app/" rel="noopener">
   <img width=400px height=200px src="https://raw.githubusercontent.com/JonasJs/github-explorer-dark/298e895bda78ac7ba76db386400acd8f42efecb7/src/assets/Logo.svg" alt="GitHub Explorer logo"></a>
 </p>
 <h3 align="center">A react app for fetching Github repositories ⚡ :rocket:</h3>
@@ -17,9 +17,9 @@
 <a href="https://github-explorer-dark.vercel.app/">
   <img src="https://img.shields.io/badge/demo-try%20online-blue?style=for-the-badge" />
 </a>
-<br/>
+<br/><br/>
 
-![React_App](https://user-images.githubusercontent.com/11879767/91240306-06f25e80-e718-11ea-9cc4-391cbac55735.gif)
+[![React_App](https://user-images.githubusercontent.com/11879767/91240306-06f25e80-e718-11ea-9cc4-391cbac55735.gif)](https://github-explorer-dark.vercel.app/)
 
 ---
 
