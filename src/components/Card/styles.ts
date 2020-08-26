@@ -33,10 +33,26 @@ export const Container = styled.div`
       margin-top: 4px;
       color: var(--light-gray);
     }
+    div {
+      margin: 8px 0 0 0;
+      display: flex;
+    }
   }
 
   svg {
     margin-left: auto;
     color: var(--light-gray);
   }
+`;
+
+export const Label = styled.p`
+  background: #${({ color }) => color};
+  color: var(--primary);
+  padding: 0 7px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  border: 1px solid transparent;
+  border-radius: 2em;
+  margin-right: 8px;
 `;

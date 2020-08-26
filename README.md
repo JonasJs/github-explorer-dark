@@ -1,44 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="" rel="noopener">
+  <img width=400px height=200px src="https://raw.githubusercontent.com/JonasJs/github-explorer-dark/298e895bda78ac7ba76db386400acd8f42efecb7/src/assets/Logo.svg" alt="GitHub Explorer logo"></a>
+</p>
+<h3 align="center">A react app for fetching Github repositories ⚡ :rocket:</h3>
 
-## Available Scripts
+<p align="center">
+  <img src="https://icon-icons.com/icons2/2415/PNG/48/react_original_wordmark_logo_icon_146375.png" width="48px" alt="React" title="React"/>
+  <img src="https://icon-icons.com/icons2/2415/PNG/48/typescript_original_logo_icon_146317.png" width="48px" alt="Typescript" title="Typescript"/>
+  <img src="https://camo.githubusercontent.com/0cd910e76658429374539a8d72a0608783918aae/68747470733a2f2f7261776769742e636f6d2f676f72616e67616a69632f72656163742d69636f6e732f6d61737465722f72656163742d69636f6e732e737667" width="48px" alt="React Icons" title="React Icons"/>
+  <img src="https://icon-icons.com/icons2/2107/PNG/48/file_type_styled_icon_130142.png" width="48px" alt="Styled Components" title="Styled Components"/>
+  <img src="https://icon-icons.com/icons2/936/PNG/48/github-logo_icon-icons.com_73546.png" width="48px" alt="Api Github" title="Api Github"/>
+</p>
 
-In the project directory, you can run:
+## 🚀 Online demo
 
-### `yarn start`
+<a href="https://github-explorer-dark.vercel.app/">
+  <img src="https://img.shields.io/badge/demo-try%20online-blue?style=for-the-badge" />
+</a>
+<br/>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![React_App](https://user-images.githubusercontent.com/11879767/91240306-06f25e80-e718-11ea-9cc4-391cbac55735.gif)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+---
 
-### `yarn test`
+<br/>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧐 About
 
-### `yarn build`
+Application built with ReactJS and TypeScript to explore GitHub repositories. This project allows searching repositories and accessing issues in an easy way.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project connects to GitHub official API to get the data.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## 🏁 Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```shell
+# open your terminal/cmd and clone this repository
 
-### `yarn eject`
+git clone https://github.com/JonasJs/github-explorer-dark.git
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# access folder github-explorer
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cd github-explorer-dark
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# install dependencies using your favorite package manager
+npm install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# run app
+npm run start
 
-## Learn More
+# The app should open on "http://localhost:3000" 🎉🎉🎉
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```

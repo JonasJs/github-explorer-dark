@@ -8,8 +8,11 @@ import api from '../../services/api';
 import Header from '../../components/Header';
 import Card from '../../components/Card';
 
+import LoadingHeaderDetails from '../../components/Shimmer/LoadingHeaderDetails';
+import LoadingCard from '../../components/Shimmer/LoadingCard';
+
 // Styles
-import { RepositoryInfo, Issues } from './styles';
+import { RepositoryInfo, Issues, Title } from './styles';
 
 // Types
 interface RepositoryParams {
@@ -42,9 +45,10 @@ interface Issues {
     url: string;
   }[];
 }
-const Details: React.FC = () => {
+const Details: React.FC<LoadingProps> = () => {
   const [repository, setRepository] = useState<Repository | null>(null);
   const [issues, setIssues] = useState<Issues[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const { params } = useRouteMatch<RepositoryParams>();
 
@@ -56,52 +60,70 @@ const Details: React.FC = () => {
     api.get(`repos/${params.repository}/issues`).then(({ data }) => {
       console.log(data);
       setIssues(data);
+      setIsLoading(false);
     });
   }, [params.repository]);
 
   return (
     <>
       <Header goBack={true} />
-      {repository && (
-        <RepositoryInfo>
-          <header>
-            <img
-              src={repository.owner.avatar_url}
-              alt={repository.owner.avatar_url}
-            />
-            <div>
-              <strong>{repository.full_name}</strong>
-              <p>{repository.description}</p>
-            </div>
-          </header>
-          <ul>
-            <li>
-              <strong>{repository.stargazers_count}</strong>
-              <span>Stars</span>
-            </li>
-            <li>
-              <strong>{repository.forks_count}</strong>
-              <span>Forks</span>
-            </li>
-            <li>
-              <strong>{repository.open_issues_count}</strong>
-              <span>Open Issues</span>
-            </li>
-          </ul>
-        </RepositoryInfo>
+      {isLoading ? (
+        <>
+          <LoadingHeaderDetails></LoadingHeaderDetails>
+          <LoadingCard></LoadingCard>
+        </>
+      ) : (
+        <>
+          {repository && (
+            <>
+              <RepositoryInfo>
+                <header>
+                  <img
+                    src={repository.owner.avatar_url}
+                    alt={repository.owner.avatar_url}
+                  />
+                  <div>
+                    <strong>{repository.full_name}</strong>
+                    <p>{repository.description}</p>
+                  </div>
+                </header>
+                <ul>
+                  <li>
+                    <strong>{repository.stargazers_count}</strong>
+                    <span>Stars</span>
+                  </li>
+                  <li>
+                    <strong>{repository.forks_count}</strong>
+                    <span>Forks</span>
+                  </li>
+                  <li>
+                    <strong>{repository.open_issues_count}</strong>
+                    <span>Open Issues</span>
+                  </li>
+                </ul>
+              </RepositoryInfo>
+            </>
+          )}
+          <Issues>
+            <Title>Open Issues</Title>
+            {issues.map(issue => (
+              <a
+                href={issue.html_url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Card
+                  image={issue.user.avatar_url}
+                  owner={issue.user.login}
+                  title={issue.title}
+                  description={issue.user.login}
+                  labels={issue.labels}
+                />
+              </a>
+            ))}
+          </Issues>
+        </>
       )}
-      <Issues>
-        {issues.map(issues => (
-          <a href={issues.html_url}>
-            <Card
-              image={issues.user.avatar_url}
-              owner={issues.user.login}
-              title={issues.title}
-              description={issues.user.login}
-            />
-          </a>
-        ))}
-      </Issues>
     </>
   );
 };

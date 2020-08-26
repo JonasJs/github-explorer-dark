@@ -55,8 +55,15 @@ export const RepositoryInfo = styled.div`
 
 export const Issues = styled.div`
   margin-top: 80px;
+  a + a {
+    margin-top: 16px;
+    display: block;
+  }
 `;
 
-export const Label = styled.div`
-  margin: 0;
+export const Title = styled.h1`
+  color: var(--white);
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 40px;
 `;
