@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github-explorer-dark.vercel.app/" rel="noopener">
-  <img width=400px height=200px src="https://raw.githubusercontent.com/JonasJs/github-explorer-dark/298e895bda78ac7ba76db386400acd8f42efecb7/src/assets/Logo.svg" alt="GitHub Explorer logo"></a>
+  <img width=400px height=120px src="https://raw.githubusercontent.com/JonasJs/github-explorer-dark/298e895bda78ac7ba76db386400acd8f42efecb7/src/assets/Logo.svg" alt="GitHub Explorer logo"></a>
 </p>
 <h3 align="center">A react app for fetching Github repositories ⚡ :rocket:</h3>
 
@@ -34,15 +34,13 @@ This project connects to GitHub official API to get the data.
 ## 🏁 Getting Started
 
 ```shell
-# open your terminal/cmd and clone this repository
-
+# open your terminal and clone this repository
 git clone https://github.com/JonasJs/github-explorer-dark.git
 
 # access folder github-explorer
-
 cd github-explorer-dark
 
-# install dependencies using your favorite package manager
+# install dependencies
 npm install
 
 # run app
