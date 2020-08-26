@@ -62,9 +62,9 @@ const Home: React.FC = () => {
 
   async function searchRepository(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setLoading(true);
     setRepositories([]);
     if (inputValue !== '') {
+      setLoading(true);
       await request();
     }
   }
